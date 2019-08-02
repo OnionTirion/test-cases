@@ -3,7 +3,7 @@ def sum_of_stat(list1,list2):
         return [a+b for a,b in zip_longest(list1,list2,fillvalue=0)]
 
 def get_stat_from_str(str):#Извлечение статистики из строки
-    if str.rfind("Statistics:")!=-1:
+    if str.find("Statistics:")!=-1:
         numb_str=str[str.rfind("Statistics:")+len("Statistics:"):len(str)]
         if numb_str.isdigit:
             stats=[int(x) for x in numb_str.split()]
